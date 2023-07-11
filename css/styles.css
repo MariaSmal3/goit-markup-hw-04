@@ -110,7 +110,20 @@ img {
   letter-spacing: 0.02em;
   color: var(--main-title-color);
 }
+/* Logo */
+.logo,
+.logo-accent {
+  font-weight: 800;
+  font-size: 18px;
+  font-family: Raleway;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
 
+.logo {
+  color: var(--main-color-web);
+  }
 /**
                   |============================
                   | Header-section
@@ -125,23 +138,17 @@ box-shadow: var(--main-shadow);
   justify-content: space-between;
   align-items: center;
 }
-.nav {
+.header-nav {
   display: flex;
   align-items: center;
 }
-.logo {
+.header .logo {
   margin-right: 76px;
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  color: var(--main-color-web);
-  display: inline-block;
 }
-
-.logo-black-title {
+.header .link {
+  padding: 24px 0;
+}
+.header .logo-black-title {
   color: var(--main-title-color);
 }
 
@@ -160,12 +167,8 @@ flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 
 
 .header-link {
-  padding: 24px 0;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  display: block;
-  letter-spacing: 0.02em;
+  position: relative;
   color: var(--main-title-color);
   transition: color var(--main-transition-duration-and-timing-function);
   }
@@ -176,10 +179,10 @@ flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   color: var(--main-link-color);
 }
 
-.header-link:active {
+.header-link.active {
   color: var(--main-color-web);
 }
-.header-link:active::after {
+.header-link.active::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -191,7 +194,7 @@ flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   background-color: var(--main-color-web);
   }
 .header-address {
-  font-style: normal;
+  
 }
 
 .header-address-list {
@@ -206,21 +209,11 @@ flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 flex-basis: calc((100% - (var(--indent)) * (var(--items) - 1)) / var(--items));
 }
 
-
-.header-address-link:hover,
-.header-address-link:focus {
-  color: var(--main-link-color);
-}
-
 .header-address-link:active {
   color: var(--main-color-web);
 }
 
 .header-address-link {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--main-text-color);
   transition: color var(--main-transition-duration-and-timing-function);
 }
